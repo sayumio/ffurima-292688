@@ -131,7 +131,8 @@
       <li class='list'>
         <%= link_to item_path(item.id) do %>
         <div class='item-img-content'>
-          <%= image_tag item.image.first, class: "item-img" %>
+          <%= image_tag item.image.variant(resize: '100x100') if item.image.present? class: "item-img" %>
+          <br>
       <% end %>
           <%# 商品が売れていればsold outを表示しましょう %>
           <div class='sold-out'>
