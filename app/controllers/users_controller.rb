@@ -9,16 +9,17 @@ class UsersController < ApplicationController
   end
 
   def create
+    User.create(user_params)
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  # end
 
   private
 
   def user_params
-    params.require(:user).permit(:nickname, :email, :password, :is_password_authenticated, :family_name, :first_name, :kana_family_name, :kana_first_name, :birth_date)
+    params.require(:user).permit(:nickname, :email, :password, :encrypted_password, :family_name, :first_name, :kana_family_name, :kana_first_name, :birth_date)
   end
 
 end
