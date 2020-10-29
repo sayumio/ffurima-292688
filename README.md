@@ -28,7 +28,7 @@
 | :status_id      | integer | null: false                    |
 | :freight_id     | integer | null: false                    |
 | :ship_region_id | integer | null: false                    |
-| :ship_bate_id   | integer | null: false                    |
+| :ship_date_id   | integer | null: false                    |
 | :price          | integer | null: false                    |
 | :user_id        | integer | null: false, foreign_key: true |
 

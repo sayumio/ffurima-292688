@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :image, :description, :category_id, :status_id, :freight_id, :ship_region_id, :ship_bate_id, :price)
+    params.require(:item).permit(:name, :image, :description, :category_id, :status_id, :freight_id, :ship_region_id, :ship_date_id, :price)
   end
 
   def move_to_index
