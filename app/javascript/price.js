@@ -1,8 +1,7 @@
-function price() {
+function calculate() {
   const itemPrice = document.getElementById("item-price");
   const addTaxPrice = document.getElementById("add-tax-price");
-  const Profit = document.getElementById("profit");
-
+  const profit = document.getElementById("profit");
   itemPrice.addEventListener('input', function() {
     let formData = itemPrice.value;
     let fee = Math.floor(formData * 0.1);
@@ -11,9 +10,9 @@ function price() {
     addTaxPrice.innerHTML = fee;
 
     sales = String(sales).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-    Profit.innerHTML = sales;
+    profit.innerHTML = sales;
 
   });
 }
 
-window.addEventListener('load', price)
+window.addEventListener('load', calculate)
