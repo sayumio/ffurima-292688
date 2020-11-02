@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   has_one_attached :image
   belongs_to       :user, optional: true
-  has_one          :order
+
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :category
@@ -25,6 +25,4 @@ class Item < ApplicationRecord
   #300〜9999999以内でないと投稿できない
   validates :price, inclusion: { in: 300..9999999 }
 
-  #数字でないと投稿できない
-  validates :price, :numericality => { :only_interger => true }
 end
