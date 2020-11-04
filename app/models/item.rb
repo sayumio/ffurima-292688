@@ -10,6 +10,11 @@ class Item < ApplicationRecord
   belongs_to_active_hash :ship_region
   belongs_to_active_hash :ship_date
 
+  #imageがないと投稿できない
+  with_options presence: true do
+    validates :image
+  end
+
   #空の状態で投稿できない
   validates :name, :description, :category, :status, :freight, :ship_region, :ship_date, presence: true
 
