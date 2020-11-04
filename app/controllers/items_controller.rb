@@ -26,10 +26,15 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    render :show unless current_user == @item.user
   end
 
   def update
-    item.update(item_params)
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      render :edit
+    end
   end
 
   def show
