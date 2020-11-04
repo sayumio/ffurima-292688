@@ -204,3 +204,13 @@
   font-weight: bold;
   font-size: 23px;
 }
+
+.item-blue-btn {
+  text-align: center;
+  background-color:#3CCACE;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw;
+}
